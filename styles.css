@@ -1,22 +1,64 @@
-/* 6. EXTERNAL CSS */
-h1 {
-    color: #000;
+/* REQUIREMENT 2: BACKGROUND COLOUR (3 marks) */
+body {
+    background-color: #f4f4f4; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    
+    /* REQUIREMENT 1: CENTER YOUR CONTENT (3 marks) */
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* REQUIREMENT 3: CONTAINERS (5 marks) */
+/* This styles the white 'paper' look of your website container */
+.main-wrapper {
+    background-color: #ffffff;
+    max-width: 1000px;
+    width: 90%;
+    margin: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* STYLING FOR THE 10-ROW TABLE (Requirement 17-20) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    /* Requirement 20: Table Border */
+    border: 5px solid #000; 
+}
+
+th, td {
+    padding: 12px;
+    border: 2px solid #333;
+    text-align: left;
+}
+
+th {
+    background-color: #eeeeee;
     text-transform: uppercase;
-    letter-spacing: 2px;
+}
+
+/* Heading Styling */
+h1 {
+    text-transform: uppercase;
     border-bottom: 3px solid #000;
+    padding-bottom: 10px;
 }
 
-h2 {
-    color: #333;
+/* Image Gallery Responsiveness */
+.gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
 }
 
-footer p {
-    font-size: 12px;
-    color: #888;
-}
-
-/* This class demonstrates external styling for our containers */
-.content-box {
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
-    background-color: #fafafa;
+.gallery img:hover {
+    transform: scale(1.05);
 }
