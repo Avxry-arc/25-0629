@@ -1,0 +1,22 @@
+/* 6. EXTERNAL CSS */
+h1 {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #000;
+}
+
+h2 {
+    color: #333;
+}
+
+footer p {
+    font-size: 12px;
+    color: #888;
+}
+
+/* This class demonstrates external styling for our containers */
+.content-box {
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    background-color: #fafafa;
+}
