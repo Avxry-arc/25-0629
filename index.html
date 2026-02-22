@@ -3,115 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nike Kenya - Assignment Version</title>
+    <title>Nike Kenya - Professional Performance Gear</title>
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        /* 1. CENTER CONTENT & 2. BACKGROUND COLOR */
+        /* Requirement 5: Internal CSS */
         body { 
-            background-color: #f4f4f4; /* Assignment Requirement 2 */
+            background-color: #f4f4f4; /* Requirement 2: Background Colour */
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center; /* Assignment Requirement 1 */
+            justify-content: center; /* Requirement 1: Center Content */
         }
 
-        /* 5. INTERNAL CSS */
-        .main-wrapper {
+        .main-container {
             background-color: #ffffff;
-            max-width: 900px;
-            width: 95%;
+            max-width: 1000px;
+            width: 90%;
             padding: 40px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            text-align: center; /* Centers text inside containers */
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
-        /* 3. CONTAINERS (Styled via Internal CSS) */
-        .content-box {
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
+        /* Requirement 3: Containers (Using div, section, header, footer) */
+        .content-section {
+            border: 1px solid #eee;
+            margin-bottom: 30px;
             padding: 20px;
-            border-radius: 8px;
         }
 
+        .gallery img { width: 30%; height: auto; margin: 5px; border-radius: 5px; }
+        
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 2px solid #000; padding: 10px; }
-        pre { background: #222; color: #fff; padding: 15px; text-align: left; }
+        th, td { padding: 12px; text-align: left; }
     </style>
 </head>
 <body>
 
-    <div class="main-wrapper"> <header class="content-box">
-            <h1>Nike Kenya Performance Hub</h1>
+    <div class="main-container"> <header class="content-section"> <h1>Nike Kenya Official Portal</h1>
+            <h2>Elite Marathon Gear</h2>
+            <h3>Engineered for Speed</h3>
+            <h4>Available Nationwide</h4>
+
             <p><strong>Nike Kenya connects millions of athletes with unique sneakers, professional spikes, and lifestyle gear, making sports affordable, comfortable, memorable, exciting, convenient, and accessible for everyone everywhere in our forty-seven beautiful counties.</strong></p>
+
+            <p><u>The Nike Alphafly 3 is engineered specifically for marathon runners looking to break world records on the streets of Nairobi or the high-altitude training tracks found in beautiful Iten.</u></p>
+            <p><u>Our local distribution network ensures that every athlete receives their high-performance gear within forty-eight hours of placing an order through our secure and encrypted online e-commerce shopping platform.</u></p>
         </header>
 
-        <section class="content-box">
-            <h2>Elite Engineering</h2>
-            <p><u>The Nike Alphafly 3 is engineered specifically for marathon runners looking to break world records on the streets of Nairobi.</u></p>
-            
+        <section class="content-section"> <div class="gallery">
+                <img src="IMG_3889.jpeg" alt="Nike Alphafly">
+                <img src="IMG_3890.jpeg" alt="Nike Vaporfly">
+                <img src="IMG_3892.jpeg" alt="Nike Pegasus">
+            </div>
+
+            <p>Physics: m/s<sup>2</sup>, Force x<sup>2</sup>, Friction 10<sup>3</sup>, Impact 5<sup>4</sup></p>
+            <p>Chemistry: Carbon C<sub>12</sub>, Oxygen O<sub>2</sub>, Nitrogen N<sub>2</sub>, Methane CH<sub>4</sub></p>
+
+            <p><del>Old Foam</del> | <del>Heavy Leather</del> | <del>Outdated Styles</del> | <del>Retail Price</del></p>
+
             <p>
-                <mark style="background-color: #000; color: #fff; padding: 5px;">Special Discount</mark> 
-                <mark style="border: 2px solid red; padding: 5px;">New Release</mark>
+                <mark style="background-color: #ffea00; color: #000;">Special Discount</mark> | 
+                <mark style="background-color: #000; color: #fff;">Top Rated</mark> | 
+                <mark style="border: 1px solid #000;">New Release</mark> | 
+                <mark style="font-weight: bold;">Limited Edition</mark>
             </p>
-
-            <p>Specs: m/s<sup>2</sup> | x<sup>2</sup> | 10<sup>3</sup> | 5<sup>4</sup></p>
-            <p>Chemistry: C<sub>12</sub> | O<sub>2</sub> | N<sub>2</sub> | CH<sub>4</sub></p>
         </section>
 
-        <section class="content-box">
-            <q>The Nike Alphafly changed how I run marathons forever.</q><br>
-            <q>The delivery was fast and the quality is truly top-tier.</q>
-            <blockquote style="margin-top: 15px;">
-                Nike Kenya promotes fitness, health, and national pride for all.<br>
-                It operates across all forty-seven counties in Kenya.
+        <section class="content-section"> <p><q>The Nike Alphafly changed how I run marathons forever.</q></p>
+            <p><q>I found the perfect fit for my training sessions.</q></p>
+            <p><q>The delivery was fast and the quality is top-tier.</q></p>
+            <p><q>Shopping here was a very easy and fast experience.</q></p>
+
+            <blockquote>
+                Nike Kenya started with a vision for local talent.<br>
+                It allows athletes to access pro gear easily.<br>
+                It operates across all forty-seven counties in Kenya.<br>
+                It promotes fitness, health, and national pride always.
             </blockquote>
+
+            <p>
+                Our team delivers high quality running shoes to your door.<br>
+                Every athlete deserves to wear the best gear for sports.<br>
+                Improve your marathon time with our new carbon fiber plates.<br>
+                Visit our main store located in the heart of Nairobi.
+            </p>
         </section>
 
-        <section class="content-box">
-            <pre>Nike Performance Tech updated 2026.
-Global markets: 190+.
-Speed experiences for all.</pre>
-            
-            <hr>
-            <div style="text-align: left; display: inline-block;">
-                <ul>
-                    <li>Road Running
-                        <ul><li>Marathon</li><li>Tempo</li></ul>
+        <section class="content-section"> <hr><p>Separating introduction from technical data.</p>
+            <hr><p>Using rules to create visual structure.</p>
+            <hr><p>Final line before our official inventory.</p>
+
+            <pre>
+Nike Performance Tech updated 2026.
+Global markets expanded to 190.
+Speed experiences for every athlete.
+            </pre>
+
+            <div style="text-align: left; display: flex; justify-content: space-around;">
+                <ul> <li>Alphafly</li>
+                    <li>Vaporfly</li>
+                    <li>Pegasus</li>
+                </ul>
+                <ol> <li>Choose Gear</li>
+                    <li>Select Size</li>
+                    <li>Pay Online</li>
+                </ol>
+                <ul> <li>Road
+                        <ul><li>Racing</li><li>Tempo</li></ul>
+                    </li>
+                    <li>Trail
+                        <ul><li>Technical</li><li>Soft</li></ul>
                     </li>
                 </ul>
             </div>
-            <hr>
-        </section>
 
-        <section class="content-box">
-            <table>
-                <caption>Official Nike Kenya Inventory 2026</caption>
-                <tr>
-                    <th>ID</th>
-                    <th>Model</th>
-                    <th>Category</th>
-                    <th>Price (KES)</th>
-                </tr>
-                <tr>
-                    <td>NK-01</td>
-                    <td>Alphafly 3</td>
-                    <td rowspan="2">Elite Racing</td>
-                    <td>28,500</td>
-                </tr>
-                <tr>
-                    <td>NK-02</td>
-                    <td>Vaporfly 3</td>
-                    <td>24,000</td>
-                </tr>
+            <table border="2">
+                <caption><strong>Requirement 19: Nike Kenya Inventory 2026</strong></caption>
+                <thead>
+                    <tr>
+                        <th>ID</th><th>Model</th><th>Cat</th><th>Color</th><th>Size</th><th>Stock</th><th>Weight</th><th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>NK01</td><td>Alphafly</td><td rowspan="2">Elite</td><td>Volt</td><td>42</td><td>10</td><td>180g</td><td>28k</td></tr>
+                    <tr><td>NK02</td><td>Vaporfly</td><td>Pink</td><td>44</td><td>5</td><td>190g</td><td>24k</td></tr>
+                    <tr><td>NK03</td><td>Pegasus</td><td>Daily</td><td>Black</td><td>40</td><td>50</td><td>250g</td><td>14k</td></tr>
+                    <tr><td>NK04</td><td>AF1</td><td>Life</td><td>White</td><td>43</td><td>20</td><td>420g</td><td>12k</td></tr>
+                    <tr><td>NK05</td><td>Dunk</td><td>Life</td><td>Panda</td><td>41</td><td>12</td><td>340g</td><td>16k</td></tr>
+                    <tr><td>NK06</td><td>Vomero</td><td>Run</td><td>Blue</td><td>42</td><td>15</td><td>280g</td><td>15k</td></tr>
+                    <tr><td>NK07</td><td>Metcon</td><td>Gym</td><td>Grey</td><td>43</td><td>8</td><td>350g</td><td>18k</td></tr>
+                    <tr><td>NK08</td><td>Structure</td><td>Stab</td><td>White</td><td>44</td><td>22</td><td>300g</td><td>14k</td></tr>
+                    <tr><td>NK09</td><td>Wildhorse</td><td>Trail</td><td>Earth</td><td>42</td><td>14</td><td>310g</td><td>17k</td></tr>
+                    <tr><td>NK10</td><td>Invincible</td><td>Cush</td><td>Lime</td><td>41</td><td>30</td><td>310g</td><td>19k</td></tr>
+                </tbody>
             </table>
         </section>
 
-        <footer>
+        <footer class="content-section">
             <hr>
             <p>&copy; 2026 Nike Kenya Project </p>
         </footer>
 
-    </div> </body>
+    </div>
+</body>
 </html>
