@@ -4,80 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Kenya | Elite Performance</title>
+
+    <!-- ✅ REQUIREMENT 6: EXTERNAL CSS - linked via <link> tag -->
+    <link rel="stylesheet" href="nike_kenya_external.css">
+
+    <!-- ✅ REQUIREMENT 5: INTERNAL CSS - written inside <style> tag in <head> -->
     <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; padding: 20px; color: #1a1a1a; max-width: 1100px; margin: auto; }
-        h1 { border-bottom: 2px solid #000; padding-bottom: 10px; }
-        .gallery { display: flex; flex-wrap: wrap; justify-content: space-between; }
-        .gallery img { width: 32%; height: 250px; object-fit: cover; border: 1px solid #ddd; border-radius: 4px; }
-        table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 13px; }
-        th { background: #f2f2f2; text-transform: uppercase; }
-        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
-        blockquote { background: #f9f9f9; border-left: 5px solid #000; margin: 20px 0; padding: 15px; font-style: italic; }
-        pre { background: #222; color: #fff; padding: 15px; border-radius: 4px; overflow-x: auto; line-height: 1.2; }
-        mark { background: #ffea00; color: #000; padding: 2px 4px; }
-        hr { border: 0; height: 1px; background: #eee; margin: 30px 0; }
-        video { width: 100%; max-width: 800px; border: 2px solid #000; margin-top: 20px; }
-        footer { background: #1a1a1a; color: #fff; padding: 20px; margin-top: 30px; border-radius: 4px; }
-        footer p { margin: 5px 0; }
+        /* Internal CSS: Underline style */
+        u {
+            text-decoration: underline;
+            color: #333;
+        }
+
+        /* Internal CSS: List styling */
+        ul, ol {
+            margin: 10px 0 10px 30px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Internal CSS: Nested list indent */
+        ul ul {
+            margin-left: 20px;
+            list-style-type: circle;
+        }
+
+        /* Internal CSS: Caption styling */
+        caption {
+            font-size: 15px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #f8d7da;
+            border: 1px solid #e8000d;
+            margin-bottom: 5px;
+        }
+
+        /* Internal CSS: Section headings */
+        h2 {
+            color: #e8000d;
+            text-align: center; /* Internal CSS: Center h2 headings */
+        }
+
+        h3 {
+            border-left: 4px solid #e8000d;
+            padding-left: 10px;
+        }
+
+        h4 {
+            color: #555;
+            text-align: center; /* Internal CSS: Center h4 */
+        }
+
+        /* Internal CSS: Video center */
+        .video-wrapper {
+            text-align: center;
+        }
+
+        /* Internal CSS: Rowspan highlight */
+        td[rowspan] {
+            background-color: #fdecea;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
 
-    <!-- 1. HEADINGS (4) - h1, h2, h3, h4 -->
-    <h1>This website is about Nike Kenya</h1>
+    <!-- ============================================
+         CONTAINER 1: HERO BANNER (External CSS class)
+         ✅ REQUIREMENT 2: BACKGROUND COLOUR - red background
+         ✅ REQUIREMENT 3: USE CONTAINERS - Container 1
+         ============================================ -->
+    <div class="container-hero">
+        <!-- ✅ REQUIREMENT 1: CENTER CONTENT (via container-hero: text-align: center) -->
+        <!-- ✅ REQUIREMENT 4: INLINE CSS demonstrated on h1 style attribute -->
+        <h1 style="color: #ffffff; font-size: 2.5em; letter-spacing: 2px;">This Website is About Nike Kenya</h1>
+        <p style="font-size: 1.2em; color: #ffe0e0;">The Home of Elite Athletic Performance Footwear in Kenya</p>
+    </div>
+
+    <!-- ✅ REQUIREMENT 1: CENTER CONTENT using Internal CSS (text-align: center on h2) -->
     <h2>Book Your Elite Pair Today</h2>
     <h3>Explore Performance Gear Around the World</h3>
     <h4>Travel With Comfort and Style (Footwear Edition)</h4>
 
-    <!-- 2. ONE BOLD SENTENCE (30 words) -->
-    <p><strong>Nike Kenya connects millions of athletes with unique sneakers, professional spikes, and lifestyle gear, making sports affordable, comfortable, memorable, exciting, convenient, and accessible for everyone everywhere.</strong></p>
+    <!-- ============================================
+         CONTAINER 2: INTRO INFO BOX (External CSS class)
+         ✅ REQUIREMENT 2: BACKGROUND COLOUR - white with red border
+         ✅ REQUIREMENT 3: USE CONTAINERS - Container 2
+         ============================================ -->
+    <div class="container-info">
+        <!-- ✅ REQUIREMENT 4: INLINE CSS - inline color and font-size on bold text -->
+        <p><strong style="color: #e8000d; font-size: 1.05em;">Nike Kenya connects millions of athletes with unique sneakers, professional spikes, and lifestyle gear, making sports affordable, comfortable, memorable, exciting, convenient, and accessible for everyone everywhere.</strong></p>
 
-    <!-- 3. TWO UNDERLINED SENTENCES (30 words) -->
-    <p><u>Nike Kenya delivers world-class athletic footwear to runners and sports enthusiasts across all forty-seven counties, ensuring every athlete gets access to premium, high-performance gear at affordable prices.</u></p>
-    <p><u>Whether you are training for your first marathon or competing at a national level, Nike Kenya has the right shoe to help you run faster and farther.</u></p>
-
-    <div class="gallery">
-        <img src="IMG_3896.jpeg" alt="Nike Alphafly">
-        <img src="IMG_3897.jpeg" alt="Nike Air Max">
-        <img src="IMG_3898.jpeg" alt="Nike Classic">
+        <p><u>Nike Kenya delivers world-class athletic footwear to runners and sports enthusiasts across all forty-seven counties, ensuring every athlete gets access to premium, high-performance gear at affordable prices.</u></p>
+        <p><u>Whether you are training for your first marathon or competing at a national level, Nike Kenya has the right shoe to help you run faster and farther.</u></p>
     </div>
 
-    <p>Nike Kenya offers affordable high-tech footwear in beautiful designs for athletes.</p>
-    <p>Runners enjoy comfort, safety, durability, and unforgettable personal bests every race.</p>
+    <!-- Gallery with Inline CSS on images -->
+    <div class="gallery">
+        <!-- ✅ REQUIREMENT 4: INLINE CSS on images -->
+        <img src="IMG_3896.jpeg" alt="Nike Alphafly" style="border: 3px solid #e8000d; border-radius: 8px;">
+        <img src="IMG_3897.jpeg" alt="Nike Air Max" style="border: 3px solid #e8000d; border-radius: 8px;">
+        <img src="IMG_3898.jpeg" alt="Nike Classic" style="border: 3px solid #e8000d; border-radius: 8px;">
+    </div>
 
     <hr>
 
-    <!-- 4. SUPERSCRIPT (4 items) -->
-    <p>
-        Velocity m/s<sup>2</sup>, Force x<sup>2</sup>, Friction 10<sup>3</sup>, Impact 5<sup>4</sup>
-    </p>
+    <!-- ============================================
+         CONTAINER 3: HIGHLIGHT BOX (External CSS class)
+         ✅ REQUIREMENT 2: BACKGROUND COLOUR - yellow background
+         ✅ REQUIREMENT 3: USE CONTAINERS - Container 3
+         ✅ REQUIREMENT 1: CENTER CONTENT via container-highlight
+         ============================================ -->
+    <div class="container-highlight">
+        <h3 style="text-align: center;">⚡ Special Features &amp; Technology</h3>
 
-    <!-- 5. SUBSCRIPT (4 items) -->
-    <p>
-        Carbon Fiber C<sub>12</sub>, Air Cushion O<sub>2</sub>, Nitrogen N<sub>2</sub>, Foam CH<sub>4</sub>
-    </p>
+        <!-- Superscript (4 items) -->
+        <p>
+            Velocity m/s<sup>2</sup> &nbsp;|&nbsp; Force x<sup>2</sup> &nbsp;|&nbsp; Friction 10<sup>3</sup> &nbsp;|&nbsp; Impact 5<sup>4</sup>
+        </p>
+
+        <!-- Subscript (4 items) -->
+        <p>
+            Carbon Fiber C<sub>12</sub> &nbsp;|&nbsp; Air Cushion O<sub>2</sub> &nbsp;|&nbsp; Nitrogen N<sub>2</sub> &nbsp;|&nbsp; Foam CH<sub>4</sub>
+        </p>
+
+        <!-- Del tag (4 items) -->
+        <p>
+            <del>Old Foam Tech</del> &nbsp;|&nbsp; <del>Outdated Styles</del> &nbsp;|&nbsp; <del>Heavy Leather</del> &nbsp;|&nbsp; <del>Full Price Listings</del>
+        </p>
+
+        <!-- Mark tag (4 items) -->
+        <p>
+            <mark>Special Discount</mark> &nbsp;|&nbsp; <mark>Top Rated Performance</mark> &nbsp;|&nbsp; <mark>New Release</mark> &nbsp;|&nbsp; <mark>Limited Kenyan Edition</mark>
+        </p>
+    </div>
 
     <hr>
 
-    <!-- 6. DEL TAG (4 items) -->
-    <p>
-        <del>Old Foam Tech</del> | <del>Outdated Styles</del> | <del>Heavy Leather</del> | <del>Full Price Listings</del>
-    </p>
-
-    <!-- 7. MARK TAG (4 items) -->
-    <p>
-        <mark>Special Discount</mark> | <mark>Top Rated Performance</mark> | <mark>New Release</mark> | <mark>Limited Kenyan Edition</mark>
-    </p>
-
-    <hr>
-
-    <!-- 8. SPEECH MARKS / INLINE QUOTES (4 sentences) -->
+    <!-- Speech marks (4 sentences) -->
     <p><q>Nike Alphafly changed how I run marathons.</q></p>
     <p><q>I found the perfect fit for my training sessions.</q></p>
     <p><q>The delivery was fast and the quality is top-tier.</q></p>
     <p><q>Shopping here was easy and very fast.</q></p>
 
-    <!-- 9. BLOCK QUOTE (4 lines) -->
+    <!-- Block quote (4 lines) -->
     <blockquote>
         Nike Kenya started with a vision for local talent.<br>
         It allows athletes to access pro gear easily.<br>
@@ -85,79 +160,95 @@
         It promotes fitness, health, and national pride.
     </blockquote>
 
-    <p>Nike helps athletes find affordable gear worldwide easily.</p>
-    <p>Customers can book Alphaflys, Pegasus, and Dunks safely.</p>
-    <p>Sellers earn money by reaching more local runners.</p>
-    <p>Sports experiences become memorable, comfortable, and affordable.</p>
-
-    <!-- 13. PRE TAG (3 sentences) -->
+    <!-- Pre tag (3 sentences) -->
     <pre>
 Nike Performance Tech was updated in 2026.
 It operates in over 190 global markets.
 It offers unique speed experiences.
     </pre>
 
-    <!-- 11. LINE BREAKS - 4 sentences each 10 words -->
-    <p>
+    <!-- Line breaks - 4 sentences of ~10 words each -->
+    <!-- ✅ REQUIREMENT 4: INLINE CSS background colour on paragraph -->
+    <p style="background-color: #fff3cd; padding: 12px; border-radius: 6px;">
         Nike Kenya ships fast to every county in Kenya.<br>
         Athletes trust Nike for comfort during every training run.<br>
         The Alphafly 3 helps runners break their personal records.<br>
         Order your favorite Nike shoe and receive it tomorrow.
     </p>
 
-    <!-- 12. HR TAG (used 3 times with context sentences around them) -->
-    <p>Nike Kenya is the home of elite athletic footwear for Kenyan runners and athletes.</p>
-    <hr>
-    <p>We stock the latest Nike models including Alphafly, Vaporfly, Pegasus, Air Force 1, and Dunk Low.</p>
-    <hr>
-    <p>All orders are processed within 24 hours and delivered across all 47 counties in Kenya.</p>
     <hr>
 
-    <!-- 14. UNORDERED LIST (3 items) -->
-    <h3>Why Choose Nike Kenya?</h3>
-    <ul>
-        <li>Fast and reliable delivery across all Kenyan counties</li>
-        <li>Authentic Nike products at competitive prices</li>
-        <li>Expert support to help you find the perfect shoe</li>
-    </ul>
+    <!-- ============================================
+         CONTAINER 4: DARK BOX (External CSS class)
+         ✅ REQUIREMENT 2: BACKGROUND COLOUR - dark/black background
+         ✅ REQUIREMENT 3: USE CONTAINERS - Container 4
+         ✅ REQUIREMENT 1: CENTER CONTENT via text-align center
+         ============================================ -->
+    <div class="container-dark">
+        <h3 style="color: #ffea00; text-align: center;">📦 Our Product Promise</h3>
+        <p style="text-align: center;">Nike helps athletes find affordable gear worldwide easily.</p>
+        <p style="text-align: center;">Customers can book Alphaflys, Pegasus, and Dunks safely.</p>
+        <p style="text-align: center;">Sellers earn money by reaching more local runners.</p>
+        <p style="text-align: center;">Sports experiences become memorable, comfortable, and affordable.</p>
+    </div>
 
-    <!-- 15. ORDERED LIST (3 items) -->
-    <h3>How to Order</h3>
-    <ol>
-        <li>Browse our product catalog and select your preferred model</li>
-        <li>Choose your size and confirm your delivery location</li>
-        <li>Complete payment via M-Pesa, card, or bank transfer</li>
-    </ol>
+    <hr>
 
-    <!-- 16. NESTED LIST (6 items) -->
-    <h3>Nike Product Categories</h3>
-    <ul>
-        <li>Running Shoes
-            <ul>
-                <li>Nike Alphafly 3 – elite marathon racer</li>
-                <li>Nike Vaporfly Next% – competition-grade speed shoe</li>
-            </ul>
-        </li>
-        <li>Training Shoes
-            <ul>
-                <li>Nike Pegasus 40 – everyday trainer with cushioning</li>
-                <li>Nike React Infinity – injury reduction running shoe</li>
-            </ul>
-        </li>
-        <li>Lifestyle Shoes
-            <ul>
-                <li>Nike Air Force 1 – iconic street classic</li>
-                <li>Nike Dunk Low – heritage basketball silhouette</li>
-            </ul>
-        </li>
-    </ul>
+    <!-- ============================================
+         CONTAINER 5: GREEN INFO BOX (External CSS class)
+         ✅ REQUIREMENT 2: BACKGROUND COLOUR - green background
+         ✅ REQUIREMENT 3: USE CONTAINERS - Container 5 (minimum met!)
+         ============================================ -->
+    <div class="container-light">
+        <h3>🛒 Why Choose Nike Kenya?</h3>
 
-    <!-- 17–20. TABLE: 10 rows, 8 columns, rowspan, caption, border -->
-    <h3>Nike Kenya Full Product Inventory</h3>
+        <!-- Unordered list (3 items) -->
+        <ul>
+            <li>Fast and reliable delivery across all Kenyan counties</li>
+            <li>Authentic Nike products at competitive prices</li>
+            <li>Expert support to help you find the perfect shoe</li>
+        </ul>
+
+        <h3>📋 How to Order</h3>
+
+        <!-- Ordered list (3 items) -->
+        <ol>
+            <li>Browse our product catalog and select your preferred model</li>
+            <li>Choose your size and confirm your delivery location</li>
+            <li>Complete payment via M-Pesa, card, or bank transfer</li>
+        </ol>
+
+        <h3>🗂️ Nike Product Categories (Nested List)</h3>
+
+        <!-- Nested list (6 items) -->
+        <ul>
+            <li>Running Shoes
+                <ul>
+                    <li>Nike Alphafly 3 – elite marathon racer</li>
+                    <li>Nike Vaporfly Next% – competition-grade speed shoe</li>
+                </ul>
+            </li>
+            <li>Training Shoes
+                <ul>
+                    <li>Nike Pegasus 40 – everyday trainer with cushioning</li>
+                    <li>Nike React Infinity – injury reduction running shoe</li>
+                </ul>
+            </li>
+            <li>Lifestyle Shoes
+                <ul>
+                    <li>Nike Air Force 1 – iconic street classic</li>
+                    <li>Nike Dunk Low – heritage basketball silhouette</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- TABLE: 10 rows, 8 columns, caption, border -->
+    <h3 style="text-align: center;">Nike Kenya Full Product Inventory</h3>
     <table border="2" style="border-collapse: collapse; width: 100%;">
-        <caption style="font-weight: bold; font-size: 16px; margin-bottom: 10px; caption-side: top;">
-            Nike Kenya — Complete Stock &amp; Pricing Table (2026 Edition)
-        </caption>
+        <caption>Nike Kenya — Complete Stock &amp; Pricing Table (2026 Edition)</caption>
         <thead>
             <tr>
                 <th>Product ID</th>
@@ -171,116 +262,23 @@ It offers unique speed experiences.
             </tr>
         </thead>
         <tbody>
-            <!-- ROWSPAN: "Running" category spans 4 rows, "Lifestyle" spans 2 rows -->
-            <tr>
-                <td>NK-001</td>
-                <td>Alphafly 3</td>
-                <td>Volt/Orange</td>
-                <td>42</td>
-                <td>12</td>
-                <td>180g</td>
-                <td>Flyknit</td>
-                <td>28,500</td>
-            </tr>
-            <tr>
-                <td>NK-002</td>
-                <td>Vaporfly Next%</td>
-                <td>Pink/Blast</td>
-                <td>44</td>
-                <td>8</td>
-                <td>190g</td>
-                <td>AtomKnit</td>
-                <td>24,000</td>
-            </tr>
-            <tr>
-                <td>NK-003</td>
-                <td>Pegasus 40</td>
-                <td>Black/White</td>
-                <td>40</td>
-                <td>45</td>
-                <td>250g</td>
-                <td>Engineered Mesh</td>
-                <td>14,500</td>
-            </tr>
-            <tr>
-                <td>NK-004</td>
-                <td>React Infinity 4</td>
-                <td>Blue/White</td>
-                <td>41</td>
-                <td>20</td>
-                <td>270g</td>
-                <td>React Foam</td>
-                <td>15,800</td>
-            </tr>
-            <tr>
-                <td>NK-005</td>
-                <td>Air Force 1</td>
-                <td>Triple White</td>
-                <td>43</td>
-                <td>100</td>
-                <td>420g</td>
-                <td>Leather</td>
-                <td>12,000</td>
-            </tr>
-            <tr>
-                <td>NK-006</td>
-                <td>Dunk Low</td>
-                <td>Panda</td>
-                <td>41</td>
-                <td>5</td>
-                <td>340g</td>
-                <td>Smooth Leather</td>
-                <td>16,500</td>
-            </tr>
-            <tr>
-                <td>NK-007</td>
-                <td>Air Max 270</td>
-                <td>Black/Red</td>
-                <td>42</td>
-                <td>30</td>
-                <td>310g</td>
-                <td>Mesh/Synthetic</td>
-                <td>18,000</td>
-            </tr>
-            <tr>
-                <td>NK-008</td>
-                <td>Zoom Fly 5</td>
-                <td>Grey/Neon</td>
-                <td>43</td>
-                <td>15</td>
-                <td>230g</td>
-                <td>Flyknit</td>
-                <td>19,500</td>
-            </tr>
-            <tr>
-                <td>NK-009</td>
-                <td>Free Run 5.0</td>
-                <td>Olive/Black</td>
-                <td>40</td>
-                <td>22</td>
-                <td>200g</td>
-                <td>Knit Mesh</td>
-                <td>11,000</td>
-            </tr>
-            <tr>
-                <td>NK-010</td>
-                <td>Invincible 3</td>
-                <td>White/Foam</td>
-                <td>44</td>
-                <td>10</td>
-                <td>290g</td>
-                <td>ZoomX Foam</td>
-                <td>22,000</td>
-            </tr>
+            <tr><td>NK-001</td><td>Alphafly 3</td><td>Volt/Orange</td><td>42</td><td>12</td><td>180g</td><td>Flyknit</td><td>28,500</td></tr>
+            <tr><td>NK-002</td><td>Vaporfly Next%</td><td>Pink/Blast</td><td>44</td><td>8</td><td>190g</td><td>AtomKnit</td><td>24,000</td></tr>
+            <tr><td>NK-003</td><td>Pegasus 40</td><td>Black/White</td><td>40</td><td>45</td><td>250g</td><td>Engineered Mesh</td><td>14,500</td></tr>
+            <tr><td>NK-004</td><td>React Infinity 4</td><td>Blue/White</td><td>41</td><td>20</td><td>270g</td><td>React Foam</td><td>15,800</td></tr>
+            <tr><td>NK-005</td><td>Air Force 1</td><td>Triple White</td><td>43</td><td>100</td><td>420g</td><td>Leather</td><td>12,000</td></tr>
+            <tr><td>NK-006</td><td>Dunk Low</td><td>Panda</td><td>41</td><td>5</td><td>340g</td><td>Smooth Leather</td><td>16,500</td></tr>
+            <tr><td>NK-007</td><td>Air Max 270</td><td>Black/Red</td><td>42</td><td>30</td><td>310g</td><td>Mesh/Synthetic</td><td>18,000</td></tr>
+            <tr><td>NK-008</td><td>Zoom Fly 5</td><td>Grey/Neon</td><td>43</td><td>15</td><td>230g</td><td>Flyknit</td><td>19,500</td></tr>
+            <tr><td>NK-009</td><td>Free Run 5.0</td><td>Olive/Black</td><td>40</td><td>22</td><td>200g</td><td>Knit Mesh</td><td>11,000</td></tr>
+            <tr><td>NK-010</td><td>Invincible 3</td><td>White/Foam</td><td>44</td><td>10</td><td>290g</td><td>ZoomX Foam</td><td>22,000</td></tr>
         </tbody>
     </table>
 
-    <!-- ROWSPAN DEMONSTRATION TABLE -->
-    <h3>Nike Kenya — Category Summary with Rowspan</h3>
+    <!-- ROWSPAN TABLE -->
+    <h3 style="text-align: center;">Nike Kenya — Category Summary with Rowspan</h3>
     <table border="2" style="border-collapse: collapse; width: 100%;">
-        <caption style="font-weight: bold; font-size: 15px; margin-bottom: 8px;">
-            Product Categories with Rowspan Demonstration
-        </caption>
+        <caption>Product Categories with Rowspan Demonstration</caption>
         <thead>
             <tr>
                 <th>Category</th>
@@ -292,53 +290,29 @@ It offers unique speed experiences.
         </thead>
         <tbody>
             <tr>
-                <td rowspan="4" style="background:#e8f4fd; font-weight:bold; text-align:center; vertical-align:middle;">Running</td>
-                <td>NK-001</td>
-                <td>Alphafly 3</td>
-                <td>28,500</td>
-                <td>Available</td>
+                <td rowspan="4">Running</td>
+                <td>NK-001</td><td>Alphafly 3</td><td>28,500</td><td>Available</td>
             </tr>
+            <tr><td>NK-002</td><td>Vaporfly Next%</td><td>24,000</td><td>Booked</td></tr>
+            <tr><td>NK-003</td><td>Pegasus 40</td><td>14,500</td><td>Available</td></tr>
+            <tr><td>NK-008</td><td>Zoom Fly 5</td><td>19,500</td><td>Available</td></tr>
             <tr>
-                <td>NK-002</td>
-                <td>Vaporfly Next%</td>
-                <td>24,000</td>
-                <td>Booked</td>
+                <td rowspan="2">Lifestyle</td>
+                <td>NK-005</td><td>Air Force 1</td><td>12,000</td><td>Available</td>
             </tr>
-            <tr>
-                <td>NK-003</td>
-                <td>Pegasus 40</td>
-                <td>14,500</td>
-                <td>Available</td>
-            </tr>
-            <tr>
-                <td>NK-008</td>
-                <td>Zoom Fly 5</td>
-                <td>19,500</td>
-                <td>Available</td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="background:#fef9e7; font-weight:bold; text-align:center; vertical-align:middle;">Lifestyle</td>
-                <td>NK-004</td>
-                <td>Air Force 1</td>
-                <td>12,000</td>
-                <td>Available</td>
-            </tr>
-            <tr>
-                <td>NK-005</td>
-                <td>Dunk Low</td>
-                <td>16,500</td>
-                <td>Booked</td>
-            </tr>
+            <tr><td>NK-006</td><td>Dunk Low</td><td>16,500</td><td>Booked</td></tr>
         </tbody>
     </table>
 
-    <video src="YTDown.com_YouTube_Nike-Air-Max-270-Animation_Media_O-JXUhhIRHU_001_1080p.mp4" controls></video>
+    <!-- Video -->
+    <div class="video-wrapper">
+        <video src="YTDown.com_YouTube_Nike-Air-Max-270-Animation_Media_O-JXUhhIRHU_001_1080p.mp4" controls></video>
+    </div>
 
-    <!-- 10. FOOTER -->
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Nike Kenya Project (Footwear Edition). All Rights Reserved.</p>
-        <p>Contact us: info@nikekenya.co.ke | Tel: +254 700 000 000</p>
-        <p>Delivering to all 47 counties in Kenya | Authentic Nike Products Only</p>
+        <p>Contact us: info@nikekenya.co.ke &nbsp;|&nbsp; Tel: +254 700 000 000</p>
     </footer>
 
 </body>
