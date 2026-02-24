@@ -293,9 +293,9 @@ td[rowspan] {
 }
 
 video {
-    width: 100%;
-    max-width: 960px;
-    height: 520px;
+    width: 70%;
+    max-width: 640px;
+    height: 360px;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
