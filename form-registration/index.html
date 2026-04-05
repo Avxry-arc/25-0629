@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>User Registration</title>
+    <title>Registration Form</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; padding-top: 50px; }
-        .form-container { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 320px; }
-        h2 { text-align: center; color: #333; }
-        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
-        button:hover { background-color: #218838; }
+        body { font-family: sans-serif; display: flex; justify-content: center; padding: 50px; background: #f4f4f4; }
+        .box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); width: 300px;}
+        input { display: block; width: 100%; margin-bottom: 10px; padding: 8px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background: #28a745; color: white; border: none; cursor: pointer; }
+        #message { display: none; color: green; text-align: center; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="form-container">
+    <div class="box" id="formBox">
         <h2>Register</h2>
-        <form action="connect.php" method="POST">
-            <label>First Name:</label>
-            <input type="text" name="fname" required>
-            
-            <label>Second Name:</label>
-            <input type="text" name="sname" required>
-            
-            <label>Email:</label>
-            <input type="email" name="email" required>
-            
-            <label>Password:</label>
-            <input type="password" name="password" required>
-            
-            <button type="submit">Register</button>
+        <form id="regForm">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Second Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Submit</button>
         </form>
     </div>
+
+    <div class="box" id="successBox" style="display:none;">
+        <h2 style="color: green;">Thank You!</h2>
+        <p>Your form has been submitted successfully.</p>
+        <button onclick="location.reload()">Back</button>
+    </div>
+
+    <script>
+        document.getElementById('regForm').onsubmit = function(e) {
+            e.preventDefault(); // This stops the page from looking for a PHP file
+            document.getElementById('formBox').style.display = 'none';
+            document.getElementById('successBox').style.display = 'block';
+        };
+    </script>
 </body>
 </html>
