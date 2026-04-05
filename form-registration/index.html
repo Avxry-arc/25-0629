@@ -1,15 +1,104 @@
-<script>
-    document.querySelector('form').addEventListener('submit', function(e) {
-        // 1. Stop the page from trying to send data to a server (which GitHub can't do)
-        e.preventDefault();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        /* CSS to make it look like a real professional site */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-        // 2. Get the name from the input field to make it feel "real"
-        const firstName = document.querySelector('input[name="fname"]').value;
+        .registration-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
 
-        // 3. Show a success message
-        alert("Registration Successful!\n\nWelcome, " + firstName + ". Your account has been created.");
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-        // 4. Optionally clear the form so it looks like it processed
-        this.reset();
-    });
-</script>
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Keeps padding inside the width */
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .message {
+            display: none;
+            text-align: center;
+            color: #155724;
+            background-color: #d4edda;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-container">
+        <h2>User Registration</h2>
+        
+        <form id="regForm">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+
+            <label for="sname">Second Name:</label>
+            <input type="text" id="sname" name="sname" placeholder="Enter Second Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div id="successMsg" class="message">
+            Registration Successful! Welcome aboard.
+        </div>
+    </div>
+
+    <script>
+        //
