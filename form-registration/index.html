@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Registration</title>
-    <style>
-        /* Add your CSS here to match the look of the examples */
-        body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 50px; }
-        form { border: 1px solid #ccc; padding: 20px; border-radius: 8px; width: 300px; }
-        input { width: 100%; margin-bottom: 10px; padding: 8px; box-sizing: border-box; }
-    </style>
-</head>
-<body>
-    <form>
-        <h2>User Registration</h2>
-        <label>First Name:</label>
-        <input type="text" name="fname">
-        <label>Second Name:</label>
-        <input type="text" name="sname">
-        <label>Email:</label>
-        <input type="email" name="email">
-        <label>Password:</label>
-        <input type="password" name="password">
-        <button type="submit">Register</button>
-    </form>
-</body>
-</html>
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        // 1. Stop the page from trying to send data to a server (which GitHub can't do)
+        e.preventDefault();
+
+        // 2. Get the name from the input field to make it feel "real"
+        const firstName = document.querySelector('input[name="fname"]').value;
+
+        // 3. Show a success message
+        alert("Registration Successful!\n\nWelcome, " + firstName + ". Your account has been created.");
+
+        // 4. Optionally clear the form so it looks like it processed
+        this.reset();
+    });
+</script>
