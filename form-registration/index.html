@@ -2,103 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
     <style>
-        /* CSS to make it look like a real professional site */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .registration-container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 350px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box; /* Keeps padding inside the width */
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #218838;
-        }
-
-        .message {
-            display: none;
-            text-align: center;
-            color: #155724;
-            background-color: #d4edda;
-            padding: 10px;
-            margin-top: 15px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input { display: block; margin-bottom: 10px; width: 250px; padding: 5px; }
+        button { padding: 5px 15px; cursor: pointer; }
+        
+        /* The specific styles for your success text */
+        #success-area { margin-top: 20px; display: none; }
+        .success-header { color: green; font-weight: bold; font-size: 1.2em; margin-bottom: 10px; }
+        .success-body { font-size: 1.1em; }
     </style>
 </head>
 <body>
 
-    <div class="registration-container">
-        <h2>User Registration</h2>
-        
-        <form id="regForm">
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+    <h1>User Registration</h1>
 
-            <label for="sname">Second Name:</label>
-            <input type="text" id="sname" name="sname" placeholder="Enter Second Name" required>
+    <form id="registrationForm">
+        <label>First Name:</label>
+        <input type="text" id="fname" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        <label>Second Name:</label>
+        <input type="text" id="sname" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="••••••••" required>
+        <label>Email:</label>
+        <input type="email" id="email" required>
 
-            <button type="submit">Register</button>
-        </form>
+        <label>Password:</label>
+        <input type="password" id="password" required>
 
-        <div id="successMsg" class="message">
-            Registration Successful! Welcome aboard.
-        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    <div id="success-area">
+        <div class="success-header">Form submitted successfully!</div>
+        <div class="success-body" id="welcome-text"></div>
     </div>
 
     <script>
-        //
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevents the page from refreshing
+
+            // Get the names entered by the user
+            const firstName = document.getElementById('fname').value;
+            const secondName = document.getElementById('sname').value;
+
+            // Show the success area
+            const successArea = document.getElementById('success-area');
+            const welcomeText = document.getElementById('welcome-text');
+            
+            successArea.style.display = 'block';
+            welcomeText.innerHTML = "Thank you, " + firstName + " " + secondName + ". Your registration has been received.";
+        });
+    </script>
+
+</body>
+</html>
