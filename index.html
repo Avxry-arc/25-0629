@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Kenya | Elite Performance</title>
 
-    <!-- ============================================================
-         ✅ REQUIREMENT 6: EXTERNAL CSS
-         Linked using <link> tag — styles live in separate .css file
-         ============================================================ -->
+    <!-- ✅ REQUIREMENT 6: EXTERNAL CSS -->
     <link rel="stylesheet" href="nike_kenya_external.css">
 
-    <!-- ============================================================
-         ✅ REQUIREMENT 5: INTERNAL CSS
-         Written inside <style> tag, directly in this HTML <head>
-         ============================================================ -->
+    <!-- ✅ REQUIREMENT 5: INTERNAL CSS -->
     <style>
 
         /* Internal CSS: underline with offset for readability */
@@ -82,9 +76,134 @@
             text-align: center;
         }
 
+        /* Internal CSS: NAVBAR */
+        .navbar {
+            background-color: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 64px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+
+        .nav-brand {
+            color: #ffffff;
+            font-size: 1.2em;
+            font-weight: 900;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #ffffff;
+            background-color: #e8000d;
+        }
+
+        /* Internal CSS: TWO COLUMN layouts */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .two-col-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .col-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 28px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        .col-card h3 {
+            border: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Internal CSS: hero button */
+        .hero-btn {
+            display: inline-block;
+            margin-top: 28px;
+            background-color: #e8000d;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 40px;
+            border-radius: 4px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .hero-btn:hover { background-color: #b5000a; }
+
+        /* Internal CSS: footer links */
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .footer-links a:hover { color: #e8000d; }
+
     </style>
 </head>
 <body>
+
+    <!-- ✅ REQUIREMENT 6: MENU BAR — 5 items -->
+    <nav class="navbar">
+        <div class="nav-brand">NIKE KENYA</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- ================================================
          CONTAINER 1 — HERO BANNER
@@ -96,6 +215,7 @@
         <!-- ✅ REQUIREMENT 4: INLINE CSS — font-size, letter-spacing, color on h1 -->
         <h1 style="font-size: 4.2em; letter-spacing: 10px; color: #ffffff; font-weight: 900;">NIKE KENYA</h1>
         <p style="color: #888888; font-size: 1.05em; letter-spacing: 3px; margin-top: 10px;">Elite Performance Footwear — Built for Kenyan Athletes</p>
+        <a href="products.html" class="hero-btn">Shop Now</a>
     </div>
 
     <div class="page-wrap">
@@ -119,6 +239,40 @@
             <!-- ✅ TWO UNDERLINED SENTENCES (30 words each) — Internal CSS styles <u> -->
             <p><u>Nike Kenya delivers world-class athletic footwear to runners and sports enthusiasts across all forty-seven counties, ensuring every athlete gets access to premium, high-performance gear at affordable prices.</u></p>
             <p><u>Whether you are training for your first marathon or competing at national level, Nike Kenya has the right shoe to help you run faster and farther than before.</u></p>
+        </div>
+
+        <!-- ✅ REQUIREMENT 1: TWO COLUMN LAYOUT -->
+        <span class="section-label">Featured Collections</span>
+        <div class="two-col">
+            <div class="col-card">
+                <h3>🏃 Running Collection</h3>
+                <p>Engineered for speed. The Alphafly 3 and Vaporfly Next% are trusted by Kenya's fastest marathon runners on the world stage.</p>
+                <a href="products.html" style="color:#e8000d; font-weight:700; text-decoration:none; font-size:0.85em; letter-spacing:1px; text-transform:uppercase;">View Running →</a>
+            </div>
+            <div class="col-card">
+                <h3>👟 Lifestyle Collection</h3>
+                <p>From Air Force 1 to Dunk Low — iconic silhouettes that blend street culture with comfort for everyday Kenyan wear.</p>
+                <a href="products.html" style="color:#e8000d; font-weight:700; text-decoration:none; font-size:0.85em; letter-spacing:1px; text-transform:uppercase;">View Lifestyle →</a>
+            </div>
+        </div>
+
+        <!-- ✅ REQUIREMENT 1: THREE COLUMN LAYOUT -->
+        <div class="two-col-3">
+            <div class="col-card" style="text-align:center;">
+                <div style="font-size:2.5em; margin-bottom:10px;">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>Nationwide shipping to all 47 counties within 48 hours.</p>
+            </div>
+            <div class="col-card" style="text-align:center;">
+                <div style="font-size:2.5em; margin-bottom:10px;">✅</div>
+                <h3>100% Authentic</h3>
+                <p>Every product is guaranteed genuine, direct from Nike.</p>
+            </div>
+            <div class="col-card" style="text-align:center;">
+                <div style="font-size:2.5em; margin-bottom:10px;">💳</div>
+                <h3>M-Pesa Ready</h3>
+                <p>Pay easily via M-Pesa, card, or bank transfer.</p>
+            </div>
         </div>
 
         <!-- GALLERY — Inline CSS applied directly on each image -->
@@ -352,6 +506,13 @@ Delivering world-class speed and comfort experiences to every single runner.
         <hr class="footer-divider">
         <p>&copy; 2026 Nike Kenya — Footwear Edition. All Rights Reserved.</p>
         <p>info@nikekenya.co.ke &nbsp;|&nbsp; +254 700 000 000 &nbsp;|&nbsp; All 47 Counties</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </footer>
 
 </body>
