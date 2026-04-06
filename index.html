@@ -4,184 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Kenya | Elite Performance</title>
-
     <link rel="stylesheet" href="nike_kenya_external.css">
-
     <style>
-
-        /* Internal CSS: underline with offset for readability */
-        u {
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            text-decoration-color: #e8000d;
-        }
-
-        /* Internal CSS: superscript and subscript size */
-        sup, sub {
-            font-size: 0.72em;
-            font-weight: 600;
-        }
-
-        /* Internal CSS: del tag — greyed out strikethrough */
-        del {
-            color: #aaaaaa;
-            text-decoration: line-through;
-        }
-
-        /* Internal CSS: inline quote tag */
-        q {
-            font-style: italic;
-            color: #555;
-        }
+        u { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #e8000d; }
+        sup, sub { font-size: 0.72em; font-weight: 600; }
+        del { color: #aaaaaa; text-decoration: line-through; }
+        q { font-style: italic; color: #555; }
         q::before { content: "\201C"; }
         q::after  { content: "\201D"; }
 
-        /* Internal CSS: line-break section box */
         .linebreak-section {
-            background-color: #f0f4ff;
-            border-left: 4px solid #3a5bd9;
-            border-radius: 0 8px 8px 0;
-            padding: 24px 30px;
-            margin: 24px 0;
-            line-height: 2.2;
-            color: #333;
-            font-size: 0.97em;
+            background-color: #f0f4ff; border-left: 4px solid #3a5bd9;
+            border-radius: 0 8px 8px 0; padding: 24px 30px;
+            margin: 24px 0; line-height: 2.2; color: #333; font-size: 0.97em;
         }
 
-        /* Internal CSS: small section label above headings */
         .section-label {
-            font-size: 10.5px;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: #e8000d;
-            margin-bottom: 6px;
-            display: block;
+            font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px;
+            text-transform: uppercase; color: #e8000d; margin-bottom: 6px; display: block;
         }
 
-        /* Internal CSS: customer quote cards */
         .quote-card {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 16px 22px;
-            margin-bottom: 12px;
-            box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+            background-color: #ffffff; border-radius: 8px; padding: 16px 22px;
+            margin-bottom: 12px; box-shadow: 0 1px 6px rgba(0,0,0,0.07);
             border-left: 3px solid #e8000d;
         }
 
-        /* Internal CSS: NAVBAR */
         .navbar {
-            background-color: #111111;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
-            height: 64px;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            background-color: #111111; display: flex; align-items: center;
+            justify-content: space-between; padding: 0 40px; height: 64px;
+            position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 12px rgba(0,0,0,0.3);
         }
 
-        .nav-brand {
-            color: #ffffff;
-            font-size: 1.2em;
-            font-weight: 900;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 8px;
-            margin: 0;
-            padding: 0;
-        }
-
+        .nav-brand { color: #ffffff; font-size: 1.2em; font-weight: 900; letter-spacing: 5px; text-transform: uppercase; }
+        .nav-links { list-style: none; display: flex; gap: 8px; margin: 0; padding: 0; }
         .nav-links li a {
-            color: #aaaaaa;
-            text-decoration: none;
-            font-size: 0.82em;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: color 0.2s, background 0.2s;
+            color: #aaaaaa; text-decoration: none; font-size: 0.82em; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase; padding: 8px 16px;
+            border-radius: 4px; transition: color 0.2s, background 0.2s;
         }
+        .nav-links li a:hover, .nav-links li a.active { color: #ffffff; background-color: #e8000d; }
 
-        .nav-links li a:hover,
-        .nav-links li a.active {
-            color: #ffffff;
-            background-color: #e8000d;
-        }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0; }
+        .two-col-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 30px 0; }
+        
+        .col-card { background: #fff; border-radius: 10px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+        .col-card h3 { border: none; padding: 0; margin-bottom: 10px; }
 
-        /* Internal CSS: TWO COLUMN layouts */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 30px 0;
-        }
-
-        .two-col-3 {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .col-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 28px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-        }
-
-        .col-card h3 {
-            border: none;
-            padding: 0;
-            margin-bottom: 10px;
-        }
-
-        /* Internal CSS: hero button */
         .hero-btn {
-            display: inline-block;
-            margin-top: 28px;
-            background-color: #e8000d;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 40px;
-            border-radius: 4px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-size: 0.9em;
+            display: inline-block; margin-top: 28px; background-color: #e8000d;
+            color: #ffffff; text-decoration: none; padding: 14px 40px; border-radius: 4px;
+            font-weight: 800; letter-spacing: 3px; text-transform: uppercase; font-size: 0.9em;
         }
-
         .hero-btn:hover { background-color: #b5000a; }
 
-        /* Internal CSS: footer links */
-        .footer-links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.82em;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
+        .footer-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #666; text-decoration: none; font-size: 0.82em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
         .footer-links a:hover { color: #e8000d; }
-
     </style>
 </head>
 <body>
@@ -211,9 +90,7 @@
 
         <div class="container-info">
             <span class="section-label">About Nike Kenya</span>
-
             <p><strong style="font-size: 1.06em; color: #111111;">Nike Kenya connects millions of athletes with unique sneakers, professional spikes, and lifestyle gear, making sports affordable, comfortable, memorable, exciting, convenient, and accessible for everyone everywhere.</strong></p>
-
             <p><u>Nike Kenya delivers world-class athletic footwear to runners and sports enthusiasts across all forty-seven counties, ensuring every athlete gets access to premium, high-performance gear at affordable prices.</u></p>
             <p><u>Whether you are training for your first marathon or competing at national level, Nike Kenya has the right shoe to help you run faster and farther than before.</u></p>
         </div>
@@ -250,41 +127,29 @@
             </div>
         </div>
 
-        <div class="gallery">
-            <img src="IMG_3896.jpeg" alt="Nike Alphafly" style="flex: 1 1 30%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-            <img src="IMG_3897.jpeg" alt="Nike Air Max" style="flex: 1 1 30%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-            <img src="IMG_3898.jpeg" alt="Nike Classic" style="flex: 1 1 30%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-            <img src="nike1.jpg" alt="Nike Collection 1" style="flex: 1 1 45%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-            <img src="nike2.jpg" alt="Nike Collection 2" style="flex: 1 1 45%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-        </div>
-
         <hr>
 
         <div class="container-highlight">
             <span class="section-label" style="color:#e8000d;">Technical Specifications</span>
             <h3 style="color:#ffffff; border-left:4px solid #e8000d;">Performance &amp; Materials Data</h3>
-
             <p>
                 Velocity m/s<sup>2</sup> &nbsp;&nbsp;&nbsp;
                 Force x<sup>2</sup> &nbsp;&nbsp;&nbsp;
                 Friction 10<sup>3</sup> &nbsp;&nbsp;&nbsp;
                 Impact Energy 5<sup>4</sup>
             </p>
-
             <p>
                 Carbon Fiber C<sub>12</sub> &nbsp;&nbsp;&nbsp;
                 Air Cushion O<sub>2</sub> &nbsp;&nbsp;&nbsp;
                 Nitrogen N<sub>2</sub> &nbsp;&nbsp;&nbsp;
                 ZoomX Foam CH<sub>4</sub>
             </p>
-
             <p>
                 <del>Old Foam Technology</del> &nbsp;&nbsp;&nbsp;
                 <del>Outdated Styles</del> &nbsp;&nbsp;&nbsp;
                 <del>Heavy Full Leather</del> &nbsp;&nbsp;&nbsp;
                 <del>Full Retail Price</del>
             </p>
-
             <p>
                 <mark>Special Discount</mark> &nbsp;&nbsp;
                 <mark>Top Rated</mark> &nbsp;&nbsp;
@@ -382,14 +247,7 @@ Delivering world-class speed and comfort experiences to every single runner.
             <caption>Nike Kenya — Complete Stock &amp; Pricing Table (2026 Edition)</caption>
             <thead>
                 <tr>
-                    <th>Product ID</th>
-                    <th>Model</th>
-                    <th>Colorway</th>
-                    <th>Size (EU)</th>
-                    <th>Stock</th>
-                    <th>Weight</th>
-                    <th>Material</th>
-                    <th>Price (KES)</th>
+                    <th>Product ID</th><th>Model</th><th>Colorway</th><th>Size (EU)</th><th>Stock</th><th>Weight</th><th>Material</th><th>Price (KES)</th>
                 </tr>
             </thead>
             <tbody>
@@ -410,40 +268,21 @@ Delivering world-class speed and comfort experiences to every single runner.
         <table border="1">
             <caption>Product Categories with Rowspan Demonstration</caption>
             <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Product ID</th>
-                    <th>Model</th>
-                    <th>Price (KES)</th>
-                    <th>Status</th>
-                </tr>
+                <tr><th>Category</th><th>Product ID</th><th>Model</th><th>Price (KES)</th><th>Status</th></tr>
             </thead>
             <tbody>
-                <tr>
-                    <td rowspan="4">Running</td>
-                    <td>NK-001</td><td>Alphafly 3</td><td>28,500</td><td>Available</td>
-                </tr>
+                <tr><td rowspan="4">Running</td><td>NK-001</td><td>Alphafly 3</td><td>28,500</td><td>Available</td></tr>
                 <tr><td>NK-002</td><td>Vaporfly Next%</td><td>24,000</td><td>Booked</td></tr>
                 <tr><td>NK-003</td><td>Pegasus 40</td><td>14,500</td><td>Available</td></tr>
                 <tr><td>NK-008</td><td>Zoom Fly 5</td><td>19,500</td><td>Available</td></tr>
-                <tr>
-                    <td rowspan="2">Lifestyle</td>
-                    <td>NK-005</td><td>Air Force 1</td><td>12,000</td><td>Available</td>
-                </tr>
+                <tr><td rowspan="2">Lifestyle</td><td>NK-005</td><td>Air Force 1</td><td>12,000</td><td>Available</td></tr>
                 <tr><td>NK-006</td><td>Dunk Low</td><td>16,500</td><td>Booked</td></tr>
             </tbody>
         </table>
 
-        <span class="section-label">Featured Media</span>
-        <div class="video-grid">
-            <video src="YTDown.com_YouTube_Nike-Air-Max-270-Animation_Media_O-JXUhhIRHU_001_1080p.mp4" controls></video>
-            <video src="THE MILLISECOND _ Nike Women's Running Spec Commercial _ Sony FX3 & FreeFly Ember S5K.mp4" controls></video>
-            <video src="Nike JA 3 Spec _ Created 100% With AI.mp4" controls></video>
-            <video src="Nike Shoes Jordan ads ( Motion Graphics Work ).mp4" controls></video>
-            <video src="YTDown.com_YouTube_Nike-Air-Force-One-Spec-Spot-by-Blackfox_Media_IqgBn7sT6vI_001_1080p.mp4" controls></video>
-        </div>
+    </div>
 
-    </div><footer>
+    <footer>
         <p class="footer-brand">NIKE KENYA</p>
         <hr class="footer-divider">
         <p>&copy; 2026 Nike Kenya — Footwear Edition. All Rights Reserved.</p>
