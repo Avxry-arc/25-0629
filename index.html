@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Kenya | Elite Performance</title>
 
-    <!-- ✅ REQUIREMENT 6: EXTERNAL CSS -->
     <link rel="stylesheet" href="nike_kenya_external.css">
 
-    <!-- ✅ REQUIREMENT 5: INTERNAL CSS -->
     <style>
 
         /* Internal CSS: underline with offset for readability */
@@ -69,11 +67,6 @@
             margin-bottom: 12px;
             box-shadow: 0 1px 6px rgba(0,0,0,0.07);
             border-left: 3px solid #e8000d;
-        }
-
-        /* Internal CSS: video wrapper */
-        .video-wrapper {
-            text-align: center;
         }
 
         /* Internal CSS: NAVBAR */
@@ -193,7 +186,6 @@
 </head>
 <body>
 
-    <!-- ✅ REQUIREMENT 6: MENU BAR — 5 items -->
     <nav class="navbar">
         <div class="nav-brand">NIKE KENYA</div>
         <ul class="nav-links">
@@ -205,14 +197,7 @@
         </ul>
     </nav>
 
-    <!-- ================================================
-         CONTAINER 1 — HERO BANNER
-         ✅ Centers content (text-align: center in External CSS)
-         ✅ Background colour: deep black #111111
-         ✅ Inline CSS on h1 and p tags
-         ================================================ -->
     <div class="container-hero">
-        <!-- ✅ REQUIREMENT 4: INLINE CSS — font-size, letter-spacing, color on h1 -->
         <h1 style="font-size: 4.2em; letter-spacing: 10px; color: #ffffff; font-weight: 900;">NIKE KENYA</h1>
         <p style="color: #888888; font-size: 1.05em; letter-spacing: 3px; margin-top: 10px;">Elite Performance Footwear — Built for Kenyan Athletes</p>
         <a href="products.html" class="hero-btn">Shop Now</a>
@@ -220,28 +205,19 @@
 
     <div class="page-wrap">
 
-        <!-- ✅ HEADINGS: h1 above, h2 h3 h4 below (4 total) -->
         <h2>Book Your Elite Pair Today</h2>
         <h3>Explore Performance Gear Across Kenya</h3>
         <h4>Travel With Comfort and Style — Footwear Edition</h4>
 
-        <!-- ================================================
-             CONTAINER 2 — INTRO BOX
-             ✅ Background colour: clean white with shadow
-             ✅ Centers content via text-align
-             ================================================ -->
         <div class="container-info">
             <span class="section-label">About Nike Kenya</span>
 
-            <!-- ✅ BOLD SENTENCE (30 words) — Inline CSS font-size -->
             <p><strong style="font-size: 1.06em; color: #111111;">Nike Kenya connects millions of athletes with unique sneakers, professional spikes, and lifestyle gear, making sports affordable, comfortable, memorable, exciting, convenient, and accessible for everyone everywhere.</strong></p>
 
-            <!-- ✅ TWO UNDERLINED SENTENCES (30 words each) — Internal CSS styles <u> -->
             <p><u>Nike Kenya delivers world-class athletic footwear to runners and sports enthusiasts across all forty-seven counties, ensuring every athlete gets access to premium, high-performance gear at affordable prices.</u></p>
             <p><u>Whether you are training for your first marathon or competing at national level, Nike Kenya has the right shoe to help you run faster and farther than before.</u></p>
         </div>
 
-        <!-- ✅ REQUIREMENT 1: TWO COLUMN LAYOUT -->
         <span class="section-label">Featured Collections</span>
         <div class="two-col">
             <div class="col-card">
@@ -256,7 +232,6 @@
             </div>
         </div>
 
-        <!-- ✅ REQUIREMENT 1: THREE COLUMN LAYOUT -->
         <div class="two-col-3">
             <div class="col-card" style="text-align:center;">
                 <div style="font-size:2.5em; margin-bottom:10px;">🚚</div>
@@ -275,29 +250,20 @@
             </div>
         </div>
 
-        <!-- GALLERY — Inline CSS applied directly on each image -->
-        <!-- ✅ REQUIREMENT 4: INLINE CSS — width, height, border-radius, object-fit on images -->
         <div class="gallery">
-            <img src="IMG_3896.jpeg" alt="Nike Alphafly"
-                 style="flex:1; height:320px; object-fit:cover; border-radius:8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-            <img src="IMG_3897.jpeg" alt="Nike Air Max"
-                 style="flex:1; height:320px; object-fit:cover; border-radius:8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-            <img src="IMG_3898.jpeg" alt="Nike Classic"
-                 style="flex:1; height:320px; object-fit:cover; border-radius:8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+            <img src="IMG_3896.jpeg" alt="Nike Alphafly" style="flex: 1 1 30%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+            <img src="IMG_3897.jpeg" alt="Nike Air Max" style="flex: 1 1 30%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+            <img src="IMG_3898.jpeg" alt="Nike Classic" style="flex: 1 1 30%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+            <img src="nike1.jpg" alt="Nike Collection 1" style="flex: 1 1 45%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+            <img src="nike2.jpg" alt="Nike Collection 2" style="flex: 1 1 45%; min-width: 250px; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
         </div>
 
         <hr>
 
-        <!-- ================================================
-             CONTAINER 3 — TECH SPECS
-             ✅ Background colour: deep navy #0a0a2e (feels premium/scientific)
-             ✅ Centers content via text-align on inner elements
-             ================================================ -->
         <div class="container-highlight">
             <span class="section-label" style="color:#e8000d;">Technical Specifications</span>
             <h3 style="color:#ffffff; border-left:4px solid #e8000d;">Performance &amp; Materials Data</h3>
 
-            <!-- ✅ SUPERSCRIPT (4 items) -->
             <p>
                 Velocity m/s<sup>2</sup> &nbsp;&nbsp;&nbsp;
                 Force x<sup>2</sup> &nbsp;&nbsp;&nbsp;
@@ -305,7 +271,6 @@
                 Impact Energy 5<sup>4</sup>
             </p>
 
-            <!-- ✅ SUBSCRIPT (4 items) -->
             <p>
                 Carbon Fiber C<sub>12</sub> &nbsp;&nbsp;&nbsp;
                 Air Cushion O<sub>2</sub> &nbsp;&nbsp;&nbsp;
@@ -313,7 +278,6 @@
                 ZoomX Foam CH<sub>4</sub>
             </p>
 
-            <!-- ✅ DEL TAG (4 items) — Internal CSS styles <del> -->
             <p>
                 <del>Old Foam Technology</del> &nbsp;&nbsp;&nbsp;
                 <del>Outdated Styles</del> &nbsp;&nbsp;&nbsp;
@@ -321,7 +285,6 @@
                 <del>Full Retail Price</del>
             </p>
 
-            <!-- ✅ MARK TAG (4 items) — External CSS styles <mark> -->
             <p>
                 <mark>Special Discount</mark> &nbsp;&nbsp;
                 <mark>Top Rated</mark> &nbsp;&nbsp;
@@ -332,14 +295,12 @@
 
         <hr>
 
-        <!-- ✅ SPEECH MARKS / Q TAG (4 sentences) — Internal CSS styles <q> -->
         <span class="section-label">What Our Customers Say</span>
         <div class="quote-card"><p><q>Nike Alphafly completely changed how I run marathons every single season.</q></p></div>
         <div class="quote-card"><p><q>I finally found the perfect fit for my intense daily training sessions.</q></p></div>
         <div class="quote-card"><p><q>The delivery was incredibly fast and the shoe quality is absolutely top-tier.</q></p></div>
         <div class="quote-card"><p><q>Shopping on Nike Kenya was easy, seamless, and completed in minutes.</q></p></div>
 
-        <!-- ✅ BLOCK QUOTE (4 lines) — External CSS styles <blockquote> -->
         <blockquote>
             Nike Kenya started with a clear vision to uplift local athletic talent.<br>
             It allows every athlete across Kenya to access professional gear with ease.<br>
@@ -347,14 +308,12 @@
             It promotes fitness, national pride, and a lasting culture of excellence.
         </blockquote>
 
-        <!-- ✅ PRE TAG (3 sentences) — External CSS styles <pre> -->
         <pre>
 Nike Performance Technology — Last Updated 2026.
 Operating across 190+ global markets with strong local presence in Kenya.
 Delivering world-class speed and comfort experiences to every single runner.
         </pre>
 
-        <!-- ✅ LINE BREAKS (4 sentences, ~10 words each) — Internal CSS styles .linebreak-section -->
         <div class="linebreak-section">
             <span class="section-label" style="color:#3a5bd9;">Quick Facts</span>
             Nike Kenya ships fast to every single county in Kenya.<br>
@@ -363,14 +322,8 @@ Delivering world-class speed and comfort experiences to every single runner.
             Order your favourite Nike shoe and receive it by tomorrow.
         </div>
 
-        <!-- ✅ HR TAG (used 3 times with context) — External CSS styles <hr> -->
         <hr>
 
-        <!-- ================================================
-             CONTAINER 4 — PROMISE SECTION
-             ✅ Background colour: Nike Red #e8000d (brand colour, purposeful)
-             ✅ Centers content via text-align: center
-             ================================================ -->
         <div class="container-dark">
             <span class="section-label" style="color:#ffcccc;">Our Promise to You</span>
             <h3 style="color:#ffffff; border-left:4px solid #ffffff; display:block; text-align:left;">Why Choose Nike Kenya?</h3>
@@ -382,15 +335,9 @@ Delivering world-class speed and comfort experiences to every single runner.
 
         <hr>
 
-        <!-- ================================================
-             CONTAINER 5 — LISTS SECTION
-             ✅ Background colour: white card with shadow
-             ================================================ -->
         <div class="container-light">
-
             <span class="section-label">Why Choose Us</span>
             <h3>Benefits of Nike Kenya</h3>
-            <!-- ✅ UNORDERED LIST (3 items) -->
             <ul>
                 <li>Fast, reliable delivery across all 47 Kenyan counties</li>
                 <li>100% authentic Nike products at competitive local prices</li>
@@ -398,7 +345,6 @@ Delivering world-class speed and comfort experiences to every single runner.
             </ul>
 
             <h3>How to Order</h3>
-            <!-- ✅ ORDERED LIST (3 items) -->
             <ol>
                 <li>Browse the catalog and select your preferred model and size</li>
                 <li>Confirm your delivery county and personal contact details</li>
@@ -406,7 +352,6 @@ Delivering world-class speed and comfort experiences to every single runner.
             </ol>
 
             <h3>Product Categories</h3>
-            <!-- ✅ NESTED LIST (6 sub-items across 3 parents) -->
             <ul>
                 <li>Running Shoes
                     <ul>
@@ -427,12 +372,10 @@ Delivering world-class speed and comfort experiences to every single runner.
                     </ul>
                 </li>
             </ul>
-
         </div>
 
         <hr>
 
-        <!-- ✅ TABLE: 10 rows, 8 columns, caption, border -->
         <span class="section-label">Product Catalog</span>
         <h3>Full Product Inventory</h3>
         <table border="1">
@@ -463,7 +406,6 @@ Delivering world-class speed and comfort experiences to every single runner.
             </tbody>
         </table>
 
-        <!-- ✅ ROWSPAN TABLE with caption and border -->
         <h3>Category Summary — Rowspan Demo</h3>
         <table border="1">
             <caption>Product Categories with Rowspan Demonstration</caption>
@@ -492,16 +434,16 @@ Delivering world-class speed and comfort experiences to every single runner.
             </tbody>
         </table>
 
-        <!-- VIDEO -->
-        <span class="section-label">Featured Video</span>
-        <div class="video-wrapper">
+        <span class="section-label">Featured Media</span>
+        <div class="video-grid">
             <video src="YTDown.com_YouTube_Nike-Air-Max-270-Animation_Media_O-JXUhhIRHU_001_1080p.mp4" controls></video>
+            <video src="THE MILLISECOND _ Nike Women's Running Spec Commercial _ Sony FX3 & FreeFly Ember S5K.mp4" controls></video>
+            <video src="Nike JA 3 Spec _ Created 100% With AI.mp4" controls></video>
+            <video src="Nike Shoes Jordan ads ( Motion Graphics Work ).mp4" controls></video>
+            <video src="YTDown.com_YouTube_Nike-Air-Force-One-Spec-Spot-by-Blackfox_Media_IqgBn7sT6vI_001_1080p.mp4" controls></video>
         </div>
 
-    </div><!-- end page-wrap -->
-
-    <!-- ✅ FOOTER — External CSS styles footer -->
-    <footer>
+    </div><footer>
         <p class="footer-brand">NIKE KENYA</p>
         <hr class="footer-divider">
         <p>&copy; 2026 Nike Kenya — Footwear Edition. All Rights Reserved.</p>
