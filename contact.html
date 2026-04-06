@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Kenya | Contact</title>
+    <link rel="stylesheet" href="nike_kenya_external.css">
+    
+    <style>
+        .contact-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1em;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #e8000d;
+            outline: none;
+        }
+        .submit-btn {
+            background-color: #111111;
+            color: #ffffff;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 4px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background-color: #e8000d;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">NIKE KENYA</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-wrap">
+        <h2>Get In Touch</h2>
+        <p style="text-align: center; margin-bottom: 40px;">Have questions about sizing, delivery, or returns? We're here to help.</p>
+
+        <div class="two-col">
+            <div class="container-highlight">
+                <h3 style="color:#ffffff;">Contact Information</h3>
+                <p><strong>Email:</strong> info@nikekenya.co.ke</p>
+                <p><strong>Phone:</strong> +254 700 000 000</p>
+                <p><strong>Headquarters:</strong> Nairobi, Kenya</p>
+                <br>
+                <h3 style="color:#ffffff;">Operating Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 2:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="county">County</label>
+                        <input type="text" id="county" name="county" placeholder="E.g., Machakos, Nairobi, Mombasa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="How can we help you today?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-brand">NIKE KENYA</p>
+        <hr class="footer-divider">
+        <p>&copy; 2026 Nike Kenya — Footwear Edition. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
