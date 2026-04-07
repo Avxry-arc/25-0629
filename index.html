@@ -13,6 +13,22 @@
         q::before { content: "\201C"; }
         q::after  { content: "\201D"; }
 
+        /* --- NEW TEXT COLUMNS CLASS --- */
+        .text-columns {
+            column-count: 2; /* Creates 2 text columns */
+            column-gap: 40px; /* Space between columns */
+            column-rule: 1px solid #e0e0e0; /* A subtle line between the columns */
+            text-align: justify;
+            margin-top: 15px;
+        }
+        
+        /* Mobile responsive for text columns */
+        @media (max-width: 768px) {
+            .text-columns {
+                column-count: 1; /* Drops back to 1 column on small screens */
+            }
+        }
+
         .linebreak-section {
             background-color: #f0f4ff; border-left: 4px solid #3a5bd9;
             border-radius: 0 8px 8px 0; padding: 24px 30px;
@@ -90,9 +106,12 @@
 
         <div class="container-info">
             <span class="section-label">About Nike Kenya</span>
-            <p><strong style="font-size: 1.06em; color: #111111;">Nike Kenya connects millions of athletes with unique sneakers, professional spikes, and lifestyle gear, making sports affordable, comfortable, memorable, exciting, convenient, and accessible for everyone everywhere.</strong></p>
-            <p><u>Nike Kenya delivers world-class athletic footwear to runners and sports enthusiasts across all forty-seven counties, ensuring every athlete gets access to premium, high-performance gear at affordable prices.</u></p>
-            <p><u>Whether you are training for your first marathon or competing at national level, Nike Kenya has the right shoe to help you run faster and farther than before.</u></p>
+            <!-- TEXT COLUMNS APPLIED HERE -->
+            <div class="text-columns">
+                <p><strong style="font-size: 1.06em; color: #111111;">Nike Kenya connects millions of athletes with unique sneakers, professional spikes, and lifestyle gear, making sports affordable, comfortable, memorable, exciting, convenient, and accessible for everyone everywhere.</strong></p>
+                <p><u>Nike Kenya delivers world-class athletic footwear to runners and sports enthusiasts across all forty-seven counties, ensuring every athlete gets access to premium, high-performance gear at affordable prices.</u></p>
+                <p><u>Whether you are training for your first marathon or competing at national level, Nike Kenya has the right shoe to help you run faster and farther than before.</u></p>
+            </div>
         </div>
 
         <span class="section-label">Featured Collections</span>
